@@ -1,6 +1,15 @@
 # erp
 
-> A Vue.js project
+> 基于Vue2.5+ElementUI的薪资管理系统
+>技术栈:
+>Vue全家桶
+>ElementUI
+>echarts
+>axios
+>vue-session
+>vue-mock
+>Vuex
+
 
 ## Build Setup
 
