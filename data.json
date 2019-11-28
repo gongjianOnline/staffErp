@@ -1,0 +1,32 @@
+{
+    "login":{
+        "message":"success"
+    },
+    "dashboard":{
+        "LateList":{
+            "frequency":"18",
+            "LateTable":[
+                {
+                    "name":"李胜利",
+                    "Late_fre":"2"
+                },
+                {
+                    "name":"李胜利",
+                    "Late_fre":"2"
+                },
+                {
+                    "name":"李胜利",
+                    "Late_fre":"2"
+                },
+                {
+                    "name":"李胜利",
+                    "Late_fre":"2"
+                },
+                {
+                    "name":"李胜利",
+                    "Late_fre":"2"
+                }
+            ]
+        }
+    }
+}

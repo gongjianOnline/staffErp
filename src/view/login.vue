@@ -71,8 +71,22 @@ export default {
     methods:{
         /**登录 */
         submitBtn(){
-            this.$router.push({
-                name:"dashboard"
+            this.$axios({
+                methods:"get",
+                url:"/api/login",
+                params:{
+                    name:this.usernumber,
+                    paw:this.userpaw
+                }
+            }).then((response)=>{
+                if(response.data.code == 101){
+                    this.alterFun("success","登录成功")
+                    this.$router.push({
+                        name:"dashboard"
+                    });
+                }else{
+                    this.alterFun("error","登录失败")
+                }
             })
         }
     },

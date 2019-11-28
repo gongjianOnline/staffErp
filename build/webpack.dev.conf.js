@@ -10,6 +10,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+// 本地化接口模拟
+const express = require('express')
+const app = express()
+var appData = require('../data.json')   //加载本地数据文件
+var dashboard = appData.dashboard             //获取对应的本地数据
+var apiRoutes = express.Router()
+app.use('/api', apiRoutes)
+
+
+
+
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -42,7 +54,34 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+
+    //本地化接口配置
+    before(app){
+      app.get("/api/login",(req,res)=>{
+        let {name,paw} = req.query;
+        if(name == "admin" && paw =="admin"){
+          res.json({
+            code:101,
+            message:'success'
+          })
+        }else{
+          res.json({
+            code:104,
+            message:'error'
+          })
+        }
+      })
+
+      app.get("/api/dashboard",(req,res)=>{
+        res.json({
+          code:101,
+          data:dashboard
+        })
+      })
     }
+
+
   },
   plugins: [
     new webpack.DefinePlugin({

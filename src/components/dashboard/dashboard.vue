@@ -206,13 +206,25 @@ export default {
     computed:{},
     created(){},
     mounted(){
-        this.linechFun()
+        //echarts
+        this.getDataFun()
+        //获取数据
+        this.linechFun();
     },
     methods:{
+        getDataFun(){
+            this.$axios({
+                methods:'get',
+                url:"/api/dashboard"
+            }).then((response)=>{
+                console.log(response)
+            })
+        },
+        //echart
         linechFun(){
             var myChart = echarts.init(document.getElementById('linech'));
             myChart.setOption(this.linechOp);
-        }
+        },
 
     },
     
