@@ -6,7 +6,7 @@
     <div class="">
         <!-- 头部 -->
         <div class="title_div">
-            title
+            新增管理员
         </div>
         <!-- 表单 -->
         <div class="form_div">

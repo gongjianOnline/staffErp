@@ -4,7 +4,7 @@
 -->
 <template>
     <div class="">
-        <div class="title_div">title</div>
+        <div class="title_div">新增员工</div>
         <!-- form -->
         <div class="form_div">
             <div class="form_title">   

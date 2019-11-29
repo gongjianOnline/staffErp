@@ -5,15 +5,15 @@
 <template>
     <div class="view-div">
         <!-- 标题 -->
-        <div class="left font_20px">title</div>
-        <div class="left font_18px margin_top">title</div>
+        <div class="left font_20px">考勤数据统计</div>
+        <div class="left font_18px margin_top">上月考勤情况</div>
 
         <!-- 预览 -->
         <div class="statistics_plate">   
             <div class="statistics_chile_div late_backColor">
-                <div class="title">late</div>
+                <div class="title">迟到人次</div>
                 <div class="statistics_data">
-                    <div class="statistics_data_number">number</div>
+                    <div class="statistics_data_number">18次</div>
                     <el-popover
                         placement="right"
                         width="200"
@@ -27,14 +27,14 @@
                                              label="次数"></el-table-column>
                         </el-table>
                         <div class="statistics_data_details_div" 
-                             slot="reference">details</div>
+                             slot="reference">查看迟到小伙伴</div>
                     </el-popover>
                 </div>
             </div>
             <div class="statistics_chile_div goout_backColor">
-                <div class="title">goOut</div>
+                <div class="title">早退人次</div>
                 <div class="statistics_data">
-                    <div class="statistics_data_number">number</div>
+                    <div class="statistics_data_number">3次</div>
                     <el-popover
                         placement="right"
                         width="200"
@@ -48,14 +48,14 @@
                                              label="次数"></el-table-column>
                         </el-table>
                         <div class="statistics_data_details_div" 
-                             slot="reference">details</div>
+                             slot="reference">查看早退小伙伴</div>
                     </el-popover>
                 </div>
             </div>
             <div class="statistics_chile_div truancy_backColor">
-                <div class="title">Truancy</div>
+                <div class="title">旷工人次</div>
                 <div class="statistics_data">
-                    <div class="statistics_data_number">number</div>
+                    <div class="statistics_data_number">3次</div>
                     <el-popover
                         placement="right"
                         width="200"
@@ -69,14 +69,14 @@
                                              label="次数"></el-table-column>
                         </el-table>
                         <div class="statistics_data_details_div" 
-                             slot="reference">details</div>
+                             slot="reference">查看旷工小伙伴</div>
                     </el-popover>
                 </div>
             </div>
             <div class="statistics_chile_div Journal_backColor">
-                <div class="title">Journal</div>
+                <div class="title">未写日志人次</div>
                 <div class="statistics_data">
-                    <div class="statistics_data_number">number</div>
+                    <div class="statistics_data_number">8次</div>
                     <el-popover
                         placement="right"
                         width="200"
@@ -90,14 +90,14 @@
                                              label="次数"></el-table-column>
                         </el-table>
                         <div class="statistics_data_details_div" 
-                             slot="reference">details</div>
+                             slot="reference">查看未写日志的小伙伴</div>
                     </el-popover>
                 </div>
             </div>
             <div class="statistics_chile_div clockin_backColor margin_right" >
-                <div class="title">clockin</div>
+                <div class="title">未打卡人次</div>
                 <div class="statistics_data">
-                    <div class="statistics_data_number">number</div>
+                    <div class="statistics_data_number">6次</div>
                     <el-popover
                         placement="right"
                         width="200"
@@ -111,7 +111,7 @@
                                              label="次数"></el-table-column>
                         </el-table>
                         <div class="statistics_data_details_div" 
-                             slot="reference">details</div>
+                             slot="reference">查看未打卡的小伙伴</div>
                     </el-popover>
                 </div>
             </div>
@@ -177,7 +177,7 @@ export default {
             //ecahrts
             linechOp:{
                 title:{
-                    text:"test"  
+                    text:"本年度迟到情况"  
                 },
                 tooltip: {
                     trigger: 'none',

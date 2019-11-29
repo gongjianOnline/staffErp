@@ -81,6 +81,8 @@ export default {
             }).then((response)=>{
                 if(response.data.code == 101){
                     this.alterFun("success","登录成功")
+                    sessionStorage.setItem("usernumber",this.usernumber);
+                    sessionStorage.setItem("userpaw",this.userpaw);
                     this.$router.push({
                         name:"dashboard"
                     });

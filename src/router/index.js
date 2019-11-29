@@ -25,7 +25,7 @@ import Add_amdin from "@/components/sySetup/add_amdin"
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -87,3 +87,33 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to,from,next)=>{
+  var usernumber = sessionStorage.getItem("usernumber");
+  var userpaw = sessionStorage.getItem("userpaw");
+  console.log("路由首位参数",usernumber,userpaw);
+  if(to.name == "login"){
+    next()
+    return 
+  };
+  
+  if(usernumber == "admin" && userpaw=="admin"){
+    next();
+    return 
+  }else{
+    next({
+      name:"login"
+    })
+    return 
+  }
+
+  // if(usernumber == null || userpaw == null){
+  //   next({
+  //     name:"login"
+  //   })
+  // }else{
+  //   next()
+  // }
+})
+
+export default router

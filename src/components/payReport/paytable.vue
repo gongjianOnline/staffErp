@@ -7,7 +7,7 @@
         <!-- 头部 -->
         <div class="header_div">
             <div class="header_left_flex">
-                <div class="header_title">title</div>
+                <div class="header_title">工资报表</div>
                 <div>
                     <el-form :inline="true" class="demo-form-inline">
                         <el-form-item label="月份">
